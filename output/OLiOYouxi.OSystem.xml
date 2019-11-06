@@ -1,0 +1,872 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OLiOYouxi.OSystem</name>
+    </assembly>
+    <members>
+        <member name="M:OLiOYouxi.OSystem.Singleton.Abstracts.ASingletonMasterInternal`1.ComfirmSingletonMaster">
+            <summary>
+            确认Singleton_T
+            </summary>
+            <returns>T</returns>
+        </member>
+        <member name="P:OLiOYouxi.OSystem.Singleton.Abstracts.ASingletonMasterInternal`1.GetSingletonMaster">
+            <summary>
+            拿到单个主要的Singleton_T
+            </summary>
+        </member>
+        <member name="P:OLiOYouxi.OSystem.Singleton.Abstracts.ASingletonMasterInternal`1.SetSingletonMaster">
+            <summary>
+            设置单个主要的Singleton_T
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions">
+            <summary>
+            关于AssetDatabase的扩展方法
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions.WriteAssetInCurrentFolder``1(System.String,``0)">
+            <summary>
+            在当前选中的文件夹中写入文件
+            </summary>
+            <typeparam name="T">可编辑对象</typeparam>
+            <param name="file">文件名称</param>
+            <param name="asset">文件</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions.WriteAssetInCurrentFolder``1(System.String,``0@)">
+            <summary>
+            在当前选中的文件夹中写入文件
+            </summary>
+            <typeparam name="T">可编辑对象</typeparam>
+            <param name="file">文件名称</param>
+            <param name="asset">文件</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions.WriteAssetInCurrentFolderByName``1(System.String)">
+            <summary>
+            在当前选中的文件夹中写入你指定类型名字的文件
+            </summary>
+            <typeparam name="T">可编辑对象</typeparam>
+            <param name="file">文件名称</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions.TryWriteAssetInThisFilePath``1(System.String,System.String,``0)">
+            <summary>
+            尝试在这个文件路径写入文件
+            </summary>
+            <typeparam name="T">可编辑对象</typeparam>
+            <param name="filePath">文件路径</param>
+            <param name="file">文件名称</param>
+            <param name="asset">文件</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions.TryWriteAssetInThisFilePath``1(System.String,System.String,``0@)">
+            <summary>
+            尝试在这个文件路径写入文件
+            </summary>
+            <typeparam name="T">可编辑对象</typeparam>
+            <param name="filePath">文件路径</param>
+            <param name="file">文件名称</param>
+            <param name="asset">文件</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.Extensions.AssetDatabaseExtensions.TryWriteAssetInThisFilePathByName``1(System.String,System.String)">
+            <summary>
+            尝试在这个文件路径写入你指定类型名字的文件
+            </summary>
+            <typeparam name="T">可编辑对象</typeparam>
+            <param name="filePath">文件路径</param>
+            <param name="file">文件名称</param>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.GameObjectExtensions">
+            <summary>
+            关于GameObject的扩展方法
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.TrySetActive(UnityEngine.GameObject,System.Boolean)">
+            <summary>
+            是否激活该GameObject
+            </summary>
+            <param name="go">对象</param>
+            <param name="active">true_not</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.TrySetActive(UnityEngine.Transform,System.Boolean)">
+            <summary>
+            是否激活该GameObject
+            </summary>
+            <param name="trans">对象</param>
+            <param name="active">true_not</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.Get01Position(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Camera)">
+            <summary>
+            坐标缩放至0-1之间
+            </summary>
+            <param name="rt"></param>
+            <param name="pos"></param>
+            <param name="camera"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.ClearChildren(UnityEngine.Transform)">
+            <summary>
+            销毁子GameObject,推荐在Game里使用
+            </summary>
+            <param name="tf">父对象</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.ClearChildren(UnityEngine.Transform,System.Action{UnityEngine.Transform})">
+            <summary>
+            销毁子GameObject,推荐在Game里使用
+            </summary>
+            <param name="tf">父对象</param>
+            <param name="action">无返回值委托,参数是子GameObject</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.ClearChildren(UnityEngine.Transform,System.Func{UnityEngine.Transform,UnityEngine.Coroutine})">
+            <summary>
+            在子GameObject执行了一段耗时间的协程方法后依序销毁子GameObject,推荐在Game里使用
+            该协程有可能是位移等等
+            </summary>
+            <param name="tf">父对象</param>
+            <param name="func">带返回值(Coroutine)委托,参数是子GameObject</param>
+            <returns>Coroutine:Func委托返回的是协程</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.ClearChildren(UnityEngine.Transform,System.Action{UnityEngine.Transform},UnityEngine.Coroutine)">
+            <summary>
+            在父GameObject执行了一段耗时间的协程方法后依序销毁子GameObject,推荐在Game里使用
+            该协程有可能是位移等等
+            </summary>
+            <param name="tf">父对象</param>
+            <param name="action">无返回值委托,参数是子GameObject</param>
+            <param name="wasted">耗时间的协程</param>
+            <returns>Coroutine:参数wasted是协程</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.ClearChildrenImmediately(UnityEngine.Transform)">
+            <summary>
+            立即销毁子GameObject,推荐在Editor里使用
+            </summary>
+            <param name="tf">对象</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.ApproxEqual(UnityEngine.Color,UnityEngine.Color,System.Single)">
+            <summary>
+            似否两颜色近似相等
+            </summary>
+            <param name="c1"></param>
+            <param name="c2"></param>
+            <param name="epsilon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.IsGrayscale(UnityEngine.Color)">
+            <summary>
+            似否似灰色
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.GameObjectExtensions.IsBluescale(UnityEngine.Color)">
+            <summary>
+            似否似蓝色
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.OLiOBaseObjectExtensions">
+            <summary>
+            关于OLiOBaseObject的扩展方法
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOBaseObjectExtensions.AddToArray``1(``0,``0[]@)">
+            <summary>
+            添加至数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="element"></param>
+            <param name="array"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOBaseObjectExtensions.AddToArray``1(``0,``0[]@,System.Int32)">
+            <summary>
+            添加至数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="element"></param>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOBaseObjectExtensions.RemoveSelf``1(``0,``0[]@)">
+            <summary>
+            从数组中移除
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="element"></param>
+            <param name="array"></param>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.OLiOBaseStructExtensions">
+            <summary>
+            关于OLiOHelperCentre的扩展方法
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOBaseStructExtensions.AddToArray``1(``0,``0[]@)">
+            <summary>
+            添加至数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="element"></param>
+            <param name="array"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOBaseStructExtensions.AddToArray``1(``0,``0[]@,System.Int32)">
+            <summary>
+            添加至数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="element"></param>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOBaseStructExtensions.RemoveSelf``1(``0,``0[]@)">
+            <summary>
+            从数组中移除
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="element"></param>
+            <param name="array"></param>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.VectorSwizzleExtensions">
+            <summary>
+            关于VectorSwizzleExtensions的扩展方法
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre">
+            <summary>
+            奥利奥枚举
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName">
+            <summary>
+            颜色名称
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.red">
+            <summary>
+            红
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.black">
+            <summary>
+            黑
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.yellow">
+            <summary>
+            黄
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.blue">
+            <summary>
+            蓝
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.magenta">
+            <summary>
+            青
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.gray">
+            <summary>
+            灰
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.white">
+            <summary>
+            白
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.clear">
+            <summary>
+            透明色
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.grey">
+            <summary>
+            灰白
+            </summary>
+        </member>
+        <member name="F:OLiOYouxi.OSystem.Helpers.OLiOEnumCentre.ColorName.green">
+            <summary>
+            绿
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre">
+            <summary>
+            奥利奥帮你
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.EnumToString``1(``0,System.String@)">
+            <summary>
+            枚举转字符串
+            </summary>
+            <typeparam name="T">枚举型</typeparam>
+            <param name="e">枚举</param>
+            <param name="es">字符串</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.StringToEnum``1(System.String,``0@)">
+            <summary>
+            字符串转枚举
+            </summary>
+            <typeparam name="T">枚举型</typeparam>
+            <param name="es">字符串</param>
+            <param name="e">枚举</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.AddOneElementToArray``1">
+            <summary>
+            （测试）添加一个默认元素到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.AddOneElementToArray``1(``0[]@)">
+            <summary>
+            添加一个默认元素到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.AddOneElementToArray``1(``0[]@,``0)">
+            <summary>
+            添加一个指定元素到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.AddOneElementToArray``1(``0[]@,``0,System.Int32)">
+            <summary>
+            添加一个默认元素到指定数组指定位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.RemoveOneElementInArray``1">
+            <summary>
+            （测试）移除最后一个元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.RemoveOneElementInArray``1(``0[]@)">
+            <summary>
+            移除最后一个元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.RemoveOneElementInArray``1(``0[]@,System.Int32)">
+            <summary>
+            移除指定元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="index">指定索引</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.RemoveOneElementInArray``1(``0[]@,System.Int32@)">
+            <summary>
+            移除指定元素，改变当前索引位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="index">指定索引</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.RemoveOneElementInArray``1(``0[]@,``0@)">
+            <summary>
+            移除当前指定元素，
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.RemoveAllElementInArray``1(``0[]@)">
+            <summary>
+            移除所有元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.ClearElementInArray``1(``0[]@)">
+            <summary>
+            清理数组元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayAddOne``1">
+            <summary>
+            （测试）奥利奥贝丝对象： 添加一个默认元素到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayAddOne``1(``0[]@)">
+            <summary>
+            奥利奥贝丝对象： 添加一个默认元素到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayAddOne``1(``0[]@,System.String)">
+            <summary>
+            奥利奥贝丝对象： 添加一个指定名称的到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="name">指定名字</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayAddOne``1(``0[]@,System.String,System.Int32)">
+            <summary>
+            奥利奥贝丝对象： 添加一个指定名称的到数组的指定位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="name">指定名字</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayAddOne``1(``0[]@,``0)">
+            <summary>
+            奥利奥贝丝对象： 添加一个指定元素的到数组的末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayAddOne``1(``0[]@,``0,System.Int32)">
+            <summary>
+            奥利奥贝丝对象： 添加一个指定元素的到数组的指定位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveOne``1">
+            <summary>
+            （测试）奥利奥贝丝对象：移除指定数组末尾的一个元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveOne``1(``0[]@)">
+            <summary>
+            奥利奥贝丝对象：移除指定数组末尾的一个元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveOne``1(``0[]@,System.String)">
+            <summary>
+            奥利奥贝丝对象：移除指定数组的一个指定名字的元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="name">指定名字</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveOne``1(``0[]@,System.Int32)">
+            <summary>
+            奥利奥贝丝对象：移除指定位置的元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveOne``1(``0[]@,System.Int32@)">
+            <summary>
+            奥利奥贝丝对象：移除指定位置的元素，改变当前索引位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveOne``1(``0[]@,``0)">
+            <summary>
+            奥利奥贝丝对象：移除当前指定的元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayRemoveAll``1(``0[]@)">
+            <summary>
+            奥利奥贝丝对象：移除所有元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.OArrayClear``1(``0[]@)">
+            <summary>
+            奥利奥贝丝对象：清理数组元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayAddOne``1">
+            <summary>
+            （测试）奥利奥贝丝值：添加一个默认元素（不初始化）到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayAddOne``1(``0[]@)">
+            <summary>
+            奥利奥贝丝值：添加一个默认元素（不初始化）到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayAddOne``1(``0[]@,System.Boolean)">
+            <summary>
+            奥利奥贝丝值：添加一个是否初始化的元素到指定数组末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="useDefault">初始化吗</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayAddOne``1(``0[]@,System.Boolean,System.Int32)">
+            <summary>
+            奥利奥贝丝值：添加一个是否初始化的元素到数组的指定位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="useDefault">初始化吗</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayAddOne``1(``0[]@,``0)">
+            <summary>
+            奥利奥贝丝值：添加一个指定元素到指定数组的末尾
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayAddOne``1(``0[]@,``0,System.Int32)">
+            <summary>
+            奥利奥贝丝值：添加一个指定元素到数组的指定位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayRemoveOne``1">
+            <summary>
+            （测试）奥利奥贝丝值：移除指定数组末尾的一个元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayRemoveOne``1(``0[]@)">
+            <summary>
+            奥利奥贝丝值：移除指定数组末尾的一个元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayRemoveOne``1(``0[]@,System.Int32)">
+            <summary>
+            奥利奥贝丝对象：移除指定位置的元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayRemoveOne``1(``0[]@,System.Int32@)">
+            <summary>
+            奥利奥贝丝对象：移除指定位置的元素，改变当前索引位置
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="index">指定位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayRemoveOne``1(``0[]@,``0)">
+            <summary>
+            奥利奥贝丝对象：移除当前指定的元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+            <param name="element">指定元素</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayRemoveAll``1(``0[]@)">
+            <summary>
+            奥利奥贝丝对象：移除所有元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.SArrayClear``1(``0[]@)">
+            <summary>
+            奥利奥贝丝对象：清理数组元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="array">指定数组</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.Read(System.String)">
+            <summary>
+            读取
+            </summary>
+            <param name="_path">文件位置</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.Read(System.String[])">
+            <summary>
+            读取
+            </summary>
+            <param name="_paths">很多文件位置</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.Write(System.String,System.String)">
+            <summary>
+            写入
+            </summary>
+            <param name="_data">数据</param>
+            <param name="_path">文件位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.Write(System.String,System.String[])">
+            <summary>
+            写入
+            </summary>
+            <param name="_data">数据</param>
+            <param name="_paths">很多文件位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.FileToByte(System.String)">
+            <summary>
+            文件转字节
+            </summary>
+            <param name="path">文件位置</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.ByteToFile(System.Byte[],System.String)">
+            <summary>
+            字节转文件
+            </summary>
+            <param name="bytes">很多字节</param>
+            <param name="path">文件位置</param>
+            <returns>布尔</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.CreateFolder(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="_path">文件夹位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.FileExist(System.String)">
+            <summary>
+            似否存在文件
+            </summary>
+            <param name="path">文件位置</param>
+            <returns>布尔</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.DirectoryExist(System.String)">
+            <summary>
+            似否存在目录
+            </summary>
+            <param name="path">文件夹位置</param>
+            <returns>布尔</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.FileOrDirectoryExist(System.String)">
+            <summary>
+            似否存在文件或者目录
+            </summary>
+            <param name="path">位置</param>
+            <returns>布尔</returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.CopyFile(System.String,System.String)">
+            <summary>
+            拷贝文件
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.MoveFile(System.String,System.String)">
+            <summary>
+            移动文件
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="path">文件位置</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.DeleteDirectory(System.String,System.Boolean)">
+            <summary>
+            删除目录
+            </summary>
+            <param name="path">文件位置</param>
+            <param name="recursive">所有子目录</param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.DeleteAllFilesIn(System.String,System.String)">
+            <summary>
+            删除指定位置的所有文件
+            </summary>
+            <param name="path">位置</param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.StringToByte(System.String)">
+            <summary>
+            字符串转字节
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.ByteToString(System.Byte[])">
+            <summary>
+            字节转字符串
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.BreakData(System.Byte[])">
+            <summary>
+            分割字节数据以四字节为一块
+            </summary>
+            <param name="allBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.MergeData(System.Byte[][])">
+            <summary>
+            合并数据
+            </summary>
+            <param name="bytess"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.FixPath(System.String)">
+            <summary>
+            完善路径讯息
+            </summary>
+            <param name="_path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetFullPath(System.String)">
+            <summary>
+            拿到完整路径讯息
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.CombinePaths(System.String[])">
+            <summary>
+            组合所有路径
+            </summary>
+            <param name="paths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetExtension(System.String)">
+            <summary>
+            拿到文件扩展名
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.ChangeExtension(System.String,System.String)">
+            <summary>
+            改变文件扩展名
+            </summary>
+            <param name="path"></param>
+            <param name="newEx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetName(System.String)">
+            <summary>
+            拿到文件名
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetNameWithExtension(System.String)">
+            <summary>
+            拿到带扩展名的文件名
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.PathIsDirectory(System.String)">
+            <summary>
+            该路径似否为目录
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetGlobalParentPath(System.String)">
+            <summary>
+            拿到全局父类目录
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetUrl(System.String)">
+            <summary>
+            拿到统一资源定位器
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetFilePath(System.String)">
+            <summary>
+            根据文件全名拿到文件路径
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetFirstFilePath(System.String)">
+            <summary>
+            拿到第一个文件的文件路径
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetFirstFilePath(System.String[])">
+            <summary>
+            拿到第一个文件的文件路径
+            </summary>
+            <param name="paths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.GetFilesIn(System.String,System.String[])">
+            <summary>
+            拿到介个路径里的所有文件全名
+            </summary>
+            <param name="path"></param>
+            <param name="searchs"></param>
+            <returns></returns>
+        </member>
+        <member name="P:OLiOYouxi.OSystem.Helpers.OLiOHelperCentre.IsTypeing">
+            <summary>
+            判断当前选择的
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.OLiOBaseObject">
+            <summary>
+            奥利奥贝丝对象
+            </summary>
+        </member>
+        <member name="P:OLiOYouxi.OSystem.OLiOBaseObject.baseName">
+            <summary>
+            鸡名
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.OLiOBaseStruct">
+            <summary>
+            奥利奥贝丝结构
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.OLiOBaseStruct.InitData">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="T:OLiOYouxi.OSystem.OLiOSingletonMaster`1">
+            <summary>
+            继承了介个的类，是一个单例
+            </summary>
+            <typeparam name="T">你的类</typeparam>
+        </member>
+        <member name="P:OLiOYouxi.OSystem.OLiOSingletonMaster`1.CreateSingletonMaster">
+            <summary>
+            拿到你要的单例
+            </summary>
+        </member>
+        <member name="M:OLiOYouxi.OSystem.OLiOSingletonMaster`1.#ctor(System.Int32)">
+            <summary>
+            记得把构造函数设为私有
+            </summary>
+            <param name="fourBytes">为了提醒你把构造函数设为私有的形参罢了</param>
+        </member>
+    </members>
+</doc>
